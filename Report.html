@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+</head>
+
+<body style="background:#eeeeee;">
+    <script type="text/javascript">
+    apiready = function(){
+        url1 = "http://aliyun03.hjie.net:9080/reports/index";
+        api.openFrame({
+            name: 'page2',
+            url: url1,
+            rect: {
+                x: 0,
+                y: 41
+            },
+            bounces: true,
+            bgColor: '#eeeeee',
+            vScrollBarEnabled: true,
+            hScrollBarEnabled: true,
+            showProgress: true
+        });
+    }
+    </script>
+</body>
+
+</html>
