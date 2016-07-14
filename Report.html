@@ -9,8 +9,14 @@
 
 <body style="background:#eeeeee;">
     <script type="text/javascript">
-    apiready = function(){
-        url1 = "http://aliyun03.hjie.net:9080/reports/index";
+    function getQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return unescape(r[2]);
+        return null;
+    }
+    apiready = function() {
+        url1 = "http://aliyun03.hjie.net:9080/reports/index?token="+GetQueryString("token");
         api.openFrame({
             name: 'page2',
             url: url1,
